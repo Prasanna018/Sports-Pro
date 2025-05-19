@@ -16,7 +16,7 @@ export default function Home() {
   const categoriesInView = useInView(categoriesRef, { once: true, amount: 0.2 })
 
   return (
-    <div className="flex flex-col gap-16 pb-16">
+    <div className="flex flex-col gap-16 pb-16 container mx-auto">
       {/* Hero Section */}
       <section className="relative h-[85vh] overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -214,13 +214,12 @@ export default function Home() {
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className={`w-4 h-4 ${
-                              i < Math.floor(product.rating)
-                                ? "text-yellow-400"
-                                : i < product.rating
-                                  ? "text-yellow-400/50"
-                                  : "text-gray-300"
-                            }`}
+                            className={`w-4 h-4 ${i < Math.floor(product.rating)
+                              ? "text-yellow-400"
+                              : i < product.rating
+                                ? "text-yellow-400/50"
+                                : "text-gray-300"
+                              }`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
